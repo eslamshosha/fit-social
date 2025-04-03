@@ -656,7 +656,6 @@ header {
   transition: all 0.3s ease-in-out;
   width: 100%;
   max-width: 136px;
-  height: 41px;
   overflow: hidden;
   display: inline-block;
   position: relative;
@@ -664,7 +663,6 @@ header {
 @media only screen and (max-width: 767px) {
   .download-btn-cont a {
     max-width: 120px;
-    height: 35px;
   }
 }
 .download-btn-cont a:after {
