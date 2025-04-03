@@ -1,0 +1,122 @@
+.social-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #161616;
+  padding: 55px 90px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  @include max-991 {
+    padding: 30px 30px 35px;
+  }
+}
+.social-logo {
+  max-width: 217px;
+  display: inline-block;
+}
+.social-text {
+  font-weight: 400;
+  font-size: 20px;
+  color: $white;
+  text-transform: capitalize;
+}
+.social-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  a {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c2e;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $hover;
+    font-weight: 800;
+    font-size: 18px;
+    @include tr;
+    &:hover {
+      background-color: #1c1c1c;
+    }
+    i {
+      width: 48px;
+      height: 48px;
+      color: $black;
+      background-color: $hover;
+      border-radius: 10px;
+      @include flexCenter;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      padding-inline-end: 48px;
+      text-align: center;
+    }
+  }
+}
+.download-btn-cont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  a {
+    display: inline-block;
+    @include tr;
+    width: 100%;
+    max-width: 136px;
+    height: 41px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    @include max-767 {
+      max-width: 120px;
+      height: 35px;
+    }
+  }
+  a:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  a:hover:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  a:active:after {
+    opacity: 0;
+  }
+  a {
+    display: block;
+  }
+  a img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
